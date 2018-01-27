@@ -366,7 +366,9 @@ public class BaseNotificationBanner: UIView {
                        y: newY,
                        width: appWindow.frame.width,
                        height: bannerHeight)
-    
+        if bannerPosition == nil {
+            bannerPosition = .top
+        }
         bannerPositionFrame = BannerPositionFrame(bannerPosition: bannerPosition,
                                                   bannerWidth: appWindow.frame.width,
                                                   bannerHeight: bannerHeight,
